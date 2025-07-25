@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Shell
+    x:Class="AvataiTestAppMashkantsev.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:AvataiTestAppMashkantsev.View"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AvataiTestAppMashkantsev">
+
+    <TabBar>
+        <ShellContent Title="List" Icon="ic_shell_list"
+                      ContentTemplate="{DataTemplate view:ListPage}" />
+        <ShellContent Title="Form" Icon="ic_shell_form" 
+                      ContentTemplate="{DataTemplate view:FormPage}" />
+        <ShellContent Title="Web" Icon="ic_shell_web"
+                      ContentTemplate="{DataTemplate view:WebPage}" />
+    </TabBar>
+
+</Shell>

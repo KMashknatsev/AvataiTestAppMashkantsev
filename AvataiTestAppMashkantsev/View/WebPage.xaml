@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Shell.FlyoutBehavior="Disabled"
+             x:Class="AvataiTestAppMashkantsev.View.WebPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:BoolToObjectConverter x:Key="BoolToColorConverter"
+                                           TrueObject="Blue"
+                                           FalseObject="LightGray" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*" >
+
+        <Grid ColumnDefinitions="*,Auto,*" ColumnSpacing="10" Margin="10,5">
+            <Button Grid.Column="0" Text="{Binding MainLabel}"
+                    Command="{Binding ShowMainSiteCommand}"
+                    BackgroundColor="{Binding IsMainActive, Converter={StaticResource BoolToColorConverter}}"
+                    TextColor="White" />
+
+            <ActivityIndicator Grid.Column="1" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+
+            <Button Grid.Column="2" Text="{Binding VideoLabel}"
+                    Command="{Binding ShowVideoSiteCommand}"
+                    BackgroundColor="{Binding IsVideoActive, Converter={StaticResource BoolToColorConverter}}"
+                    TextColor="White" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <WebView x:Name="MainWebView"
+                     Source="{Binding MainUrl}"
+                     IsVisible="{Binding IsMainActive}"
+                     VerticalOptions="Fill" />
+
+            <WebView x:Name="VideoWebView"
+                     Source="{Binding VideoUrl}"
+                     IsVisible="{Binding IsVideoActive}"
+                     VerticalOptions="Fill" />
+        </Grid>
+    </Grid>
+</ContentPage>
