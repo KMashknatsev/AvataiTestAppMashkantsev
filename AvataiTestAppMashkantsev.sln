@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvataiTestAppMashkantsev", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvataiTestAppMashkantsev.Tests", "AvataiTestAppMashkantsev.Tests\AvataiTestAppMashkantsev.Tests.csproj", "{E79DE2B5-A666-4C92-9063-C2E253939FE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvataiTestAppMashkantsev.Core", "AvataiTestAppMashkantsev.Core \AvataiTestAppMashkantsev.Core.csproj", "{3A2C0703-C78C-4502-919E-1BF78E6AF8AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvataiTestAppMashkantsev.Core", "AvataiTestAppMashkantsev.Core\AvataiTestAppMashkantsev.Core.csproj", "{3A2C0703-C78C-4502-919E-1BF78E6AF8AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

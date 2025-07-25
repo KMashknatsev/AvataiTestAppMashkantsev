@@ -67,7 +67,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AvataiTestAppMashkantsev.Core \AvataiTestAppMashkantsev.Core.csproj" />
+      <ProjectReference Include="..\AvataiTestAppMashkantsev.Core\AvataiTestAppMashkantsev.Core.csproj" />
     </ItemGroup>
 
 </Project>
